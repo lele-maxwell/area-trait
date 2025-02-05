@@ -9,8 +9,8 @@ FROM debian:latest
 
 RUN apt-get update && apt-get install -y libssl-dev
 
-COPY --from=builder /app/target/release/calculator /app/
+COPY --from=builder /app/target/release/area_cal /app/
 
 RUN chmod +x /app/calculator
 
-CMD ["/app/payment-methods"]
+CMD ["/app/area_cal"]
